@@ -1,5 +1,62 @@
-<h1>ExchangeApp</h1>
+<div class="container container-table" style="width: 80%">
+    <div class="row vertical-center-row">
+        <h1>ExchangeApp</h1>
+        <form class="form-horizontal" role="form" id="convert-form" action="/convert" method="post">
+          <input name="utf8" type="hidden" value="&#x2713;" />
+          <div class="row">
+            <div class="col-xs-4 col-md-3">
+              <%= label_tag("date", "Date:") %>
+              <input name="date" type="text" class='datepicker'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-md-3">
+              <%= label_tag(:amount, "Amount:") %>
+              <%= text_field_tag(:amount) %>
+            </div>
+            <div class="col-xs-4 col-md-3">
+              <div>
+                <%= label_tag(:from, "From:") %>
+                <%= select_tag :from, options_for_select(@from.collect.with_index.to_a) %>                
+              </div>
+              <div>
+                <%= label_tag(:to, "To:") %>
+                <%= select_tag :to, options_for_select(@to.collect.with_index.to_a) %>                
+              </div>
+            </div>
+          </div>
+          <div class="row">            
+            <div class="col-xs-2 col-md-1">
+              <button type="submit" class="btn btn-default">
+                Convert
+              </button>
+            </div>            
+            <div class="col-xs-2 col-md-6">
+              <%= label_tag("result", "Result:") %>
+              <input readonly name="result" type="text" id="result">
+            </div>          
+          </div>
+        </form>
+    </div>
+</div>
 
-<!--%= f.date_field :date, min: Date.now(1994, 07, 03), max: Date.today %-->
-<!--%= date_select('transaction','date',selected: Date.today, min: 90.days.ago, max: Date.today, :discard_year) %-->
-<p>Find me in app/views/exchange/show.html.erb</p>
+<script type="text/javascript">
+  $('#convert-form').submit(function(){
+    $.ajax({
+      type: this.method,
+      url: this.action,
+      data: $(this).serialize(),
+      success: function(response){
+        $("#result").val(response.result);
+      }
+    });
+    return false;
+  });
+
+  $(document).ready(function() {
+    $('.datepicker').datepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true
+    });
+  });
+</script>
