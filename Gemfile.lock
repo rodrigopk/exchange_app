@@ -10,6 +10,13 @@ GIT
   specs:
     rails_log_stdout (0.0.1)
 
+GIT
+  remote: https://github.com/rodrigopk/exchange_rate.git
+  revision: 03d14b7683af13958cd0cbdca137581560017d1b
+  specs:
+    exchange_rate (0.1.0)
+      rails (~> 5.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,6 +190,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  exchange_rate!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
