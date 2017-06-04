@@ -1,24 +1,12 @@
-# README
+# ECB Currency conversion
+This app was made to test my [exchange_rate plugin](https://github.com/rodrigopk/exchange_rate). It uses currency data from ECB and uses it to convert values between currencies.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Instalation
 
-Things you may want to cover:
+    $ https://github.com/rodrigopk/exchange_app.git
+    $ cd exchange_app
+    $ bundle install
 
-* Ruby version
+  Then start a local server and it should be running on ``` http://localhost:3000 ```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    $ rails s
