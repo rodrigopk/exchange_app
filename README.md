@@ -1,5 +1,7 @@
 # ECB Currency conversion
 This app was made to test my [exchange_rate plugin](https://github.com/rodrigopk/exchange_rate). It uses currency data from ECB and uses it to convert values between currencies.
+You can see it running on heroku [here](https://ecb-exchange.herokuapp.com/)
+
 
 ### Instalation
 
@@ -10,3 +12,4 @@ This app was made to test my [exchange_rate plugin](https://github.com/rodrigopk
   Then start a local server and it should be running on ``` http://localhost:3000 ```
 
     $ rails s
+
