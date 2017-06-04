@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/rodrigopk/exchange_rate.git
-  revision: 03d14b7683af13958cd0cbdca137581560017d1b
+  revision: 48cdbd4215f945185370627c00058d85cea82e5b
   specs:
     exchange_rate (0.1.0)
       rails (~> 5.0.3)
