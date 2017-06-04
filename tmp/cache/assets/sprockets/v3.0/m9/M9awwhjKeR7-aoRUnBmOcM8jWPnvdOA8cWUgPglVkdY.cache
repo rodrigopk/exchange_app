@@ -1,0 +1,7 @@
+I"Š(function() {
+  $(document).ready(function() {
+    $('.datepicker').datepicker("option", "dateFormat", "yy-mm-dd");
+  });
+
+}).call(this);
+:ET

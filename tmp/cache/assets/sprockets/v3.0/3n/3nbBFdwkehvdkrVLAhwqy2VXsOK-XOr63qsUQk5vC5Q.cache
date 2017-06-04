@@ -1,0 +1,11 @@
+I"Ã(function() {
+  $(document).ready(function() {
+    $('.datepicker').datepicker({
+      setDate: new Date,
+      autoclose: true,
+      dateFormat: 'yyy-mm-dd'
+    }).val();
+  });
+
+}).call(this);
+:ET

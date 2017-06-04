@@ -1,0 +1,21 @@
+I"‘(function() {
+  $('#convert-form').submit(function() {
+    $.ajax({
+      type: this.method,
+      url: this.action,
+      data: $(this).serialize(),
+      success: function(response) {
+        console.log(response);
+        $('#result').val(response.result);
+      }
+    });
+    return false;
+  });
+
+  $('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    autoclose: true
+  });
+
+}).call(this);
+:ET
